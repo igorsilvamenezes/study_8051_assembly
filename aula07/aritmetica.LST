@@ -1,0 +1,47 @@
+8051 Assembler           Version 1.00   01/16/123 22:52:06    Page 1
+C:\IGOR\STUDIES\8051_assembly\aulas_2023\aula07\aritmetica.a51
+
+
+
+    1 0000              ; Aula 007 do curso 8051 - Aritimética com Registradores e memórias
+    2 0000              ;
+    3 0000              ; Autor: Igor Menezes - Janeiro de 2023
+    4 0000              ;
+    5 0000              ;
+    6 0000              
+    7 0000                              org                     0000h                   ;Origem no endereço 00h
+    8 0000              
+    9 0000              inicio:
+   10 0000              
+   11 0000 740A                         mov                     a,#0ah                  ;Move a constante a hexa para o acc
+   12 0002 75F003                       mov                     b,#03h                  ;Move a constante 3 hexa para b
+   13 0005 752306                       mov                     23h,#06h                ;Move a constante 6 hexa para o M[23]
+   14 0008 75200F                       mov                     20h,#0fh                ;Move a constante f hexa para o M[20]
+   15 000B              
+   16 000B 2523                         add                     a,23h                   ;a = a + M[23]
+   17 000D              
+   18 000D 04                           inc                     a                       ;a = a + 1 (a++)
+   19 000E 15F0                         dec                     b                       ;b = b - 1 (b--)
+   20 0010              
+   21 0010 9520                         subb                    a,20h                   ;a = a - M[20]
+   22 0012                              
+   23 0012 740C                         mov                     a,#0ch                  ;Move o valor c hexa para o acumulador
+   24 0014 75F008                       mov                     b,#08h                  ;Move o valor 8 hexa para o b
+   25 0017              
+   26 0017 A4                           mul                     ab                     ;ab = a * b
+   27 0018                                                                              ;b = byte mais significativo
+   28 0018                                                                              ;c = byte menos significativo
+   29 0018              
+   30 0018 7445                         mov                     a,#45h                  ;
+   31 001A 75F007                       mov                     b,#7                    ;
+   32 001D              
+   33 001D 84                           div                     ab                      ;a = divisão, b = resto
+   34 001E              
+   35 001E 011E                         ajmp                    $                       ;segura o código
+   36 0020              
+   37 0020                              end                                            ;final do programa
+
+Defined Symbols:
+
+Defined Labels:
+  INICIO                                    000000  0
