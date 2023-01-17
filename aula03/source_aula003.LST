@@ -1,0 +1,31 @@
+8051 Assembler           Version 1.00   01/03/123 20:13:13    Page 1
+C:\IGOR\STUDIES\8051_assemlby\aulas_2023\aula03\source_aula003.a51
+
+
+
+    1 0000              ;
+    2 0000              ; Aula 003
+    3 0000              ;
+    4 0000              ; Demostração do ciclo de máquina (ciclo de instrução)
+    5 0000              ;
+    6 0000              ; Autor: Igor Menezes
+    7 0000              ;
+    8 0000              ; Data: Janeiro de 2023
+    9 0000              ; 12MHz / 12 = 1MHz = 1us
+   10 0000              
+   11 0000                              org             0000h           ;Origem no endereço 00h
+   12 0000              
+   13 0000              inicio:
+   14 0000              
+   15 0000 7401                         mov             a,#01h          ;Move a constante 1h para o acumulador
+   16 0002 75A000                       mov             p2,#00h         ;Move o valor 00h para o PORT2
+   17 0005 75A0FF                       mov             p2,#0FFh        ;Move o valor FFh para o PORT2
+   18 0008 7402                         mov             a,#02h          ;Move a constante 2h para o acumulador
+   19 000A 020000                       jmp             inicio          ;Loop infinito
+   20 000D                      
+   21 000D                              end                             ;Final do programa
+
+Defined Symbols:
+
+Defined Labels:
+  INICIO                                    000000  0

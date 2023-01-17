@@ -1,0 +1,32 @@
+8051 Assembler           Version 1.00   01/11/123 22:10:51    Page 1
+C:\IGOR\STUDIES\8051_assemlby\aulas_2023\aula06\source_aula006.a51
+
+
+
+    1 0000              ; Aula 006
+    2 0000              ;
+    3 0000              ; Registradores de Uso Geral
+    4 0000              ;
+    5 0000              ; Igor Menezes
+    6 0000              ;
+    7 0000              ;
+    8 0000              
+    9 0000                              org             0000h           ;Origem no endereço 0h
+   10 0000              
+   11 0000              inicio:
+   12 0000              
+   13 0000 790F                         mov             r1,#0fh         ;Move a constate 0fh para R1
+   14 0002 E9                           mov             a,r1            ;Move o conteudo de r1 para o acc
+   15 0003 FD                           mov             r5,a            ;Move o conteúdo do acumulador para r5
+   16 0004 0D                           inc             r5              ;Incrementa r5 em 1. r5 = r5 + 1, r5++
+   17 0005 0D                           inc             r5
+   18 0006 0D                           inc             r5
+   19 0007              
+   20 0007 0107                         ajmp            $               ;Segura o código nesta linha
+   21 0009              
+   22 0009                              end                             ;Fim do programa
+
+Defined Symbols:
+
+Defined Labels:
+  INICIO                                    000000  0

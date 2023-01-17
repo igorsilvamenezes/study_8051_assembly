@@ -1,0 +1,27 @@
+8051 Assembler           Version 1.00   01/10/123 13:50:43    Page 1
+C:\IGOR\STUDIES\8051_assemlby\aulas_2023\aula05\source_aula005.a51
+
+
+
+    1 0000              ;
+    2 0000              ; Curso de 8051 em Assembly
+    3 0000              ;
+    4 0000              ; Exemplo de direcionamento direto
+    5 0000              ;
+    6 0000              ; Igor Menezes - Janeiro de 2023
+    7 0000              ;
+    8 0000              
+    9 0000                              org                     0000h           ;Origem no endereço 00h de memória
+   10 0000              
+   11 0000              inicio:
+   12 0000 7520BB                       mov             20h,#0bbh       ;Move o valor constante para o endereço 20h de memória
+   13 0003 852023                       mov             23h,20h         ;Move o conteudo do endereço 20h de memória p/ 23h
+   14 0006 E5A0                         mov             a,P2            ;Move o conteudo do port2 para o acumulador
+   15 0008 2523                         add             a,23h           ; a = a + Conteúdo do endereço 23h de memória
+   16 000A              
+   17 000A                              end                             ;Final do programa 
+
+Defined Symbols:
+
+Defined Labels:
+  INICIO                                    000000  0

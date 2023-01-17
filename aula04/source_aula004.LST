@@ -1,0 +1,31 @@
+8051 Assembler           Version 1.00   01/04/123 21:38:32    Page 1
+C:\IGOR\STUDIES\8051_assemlby\aulas_2023\aula04\source_aula004.a51
+
+
+
+    1 0000              ; Exemplo aula 4
+    2 0000              ;
+    3 0000              ; Curso de Microsontroladores 8051 em Assembly
+    4 0000              ;
+    5 0000              ; ciclo de máquina = 1/(12MHz/12) = 1us
+    6 0000              ;
+    7 0000              ;
+    8 0000              ;
+    9 0000              
+   10 0000                      org             0000h                   ;Origem no endereço 00h de memória
+   11 0000              
+   12 0000              inicio:
+   13 0000              
+   14 0000 7401                 mov             a,#01h                  ;Move a constante 1h para o acc
+   15 0002 75F006               mov             b,#00000110b            ;Move a constante 6 para o b
+   16 0005 7407                 mov             a,#7d                   ;Move a constante 7 para o acc
+   17 0007 04                   inc             a                       ;Incrementa o acumulador em 1 unidade
+   18 0008 909957               mov             dptr,#9957h             ;Move o valor 9957h para o registrador data poiter
+   19 000B 02000B               jmp             $                       ;Segura o código nesta linha
+   20 000E              
+   21 000E                      end                                     ;Fim do programa
+
+Defined Symbols:
+
+Defined Labels:
+  INICIO                                    000000  0

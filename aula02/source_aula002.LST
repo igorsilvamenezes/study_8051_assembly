@@ -1,0 +1,27 @@
+8051 Assembler           Version 1.00   01/02/123 22:20:19    Page 1
+C:\IGOR\STUDIES\8051_assemlby\aulas_2023\aula02\source_aula002.a51
+
+
+
+    1 0000              ; Projeto Aula 2
+    2 0000              ;
+    3 0000              ; Altera o nível lógico do PORT0
+    4 0000              ;
+    5 0000              ; Autor: Igor Menezes
+    6 0000              ;
+    7 0000              ; MCU: AT89S51
+    8 0000              
+    9 0000                      org             0000h                   ;Origem no endereço 00h de memória
+   10 0000              
+   11 0000              inicio:
+   12 0000              
+   13 0000 758000               mov             p0,#00h                 ;Todo PORT0 em nível lógico baixo
+   14 0003 7580FF               mov             p0,#0FFh                ;Todo PORT0 em nível lógico alto
+   15 0006 020000               jmp             inicio                  ;Pula para o inicio
+   16 0009              
+   17 0009                      end                                     ;Final do programa
+
+Defined Symbols:
+
+Defined Labels:
+  INICIO                                    000000  0
