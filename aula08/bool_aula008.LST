@@ -1,0 +1,45 @@
+8051 Assembler           Version 1.00   01/18/123 22:40:12    Page 1
+C:\IGOR\STUDIES\8051_assembly\aulas_2023\aula08\bool_aula008.a51
+
+
+
+    1 0000              ;
+    2 0000              ; Curso de Assembly para 8051 Aula 008
+    3 0000              ;
+    4 0000              ; Instruções Lógicas e Booleanas
+    5 0000              ;
+    6 0000              ; Autor: Igor Menezes
+    7 0000              ;
+    8 0000              ; Data: Julho de 2015
+    9 0000              ;
+   10 0000              
+   11 0000                      org             0000h           ;Origem no endereço 00h de memória
+   12 0000              
+   13 0000              inicio:
+   14 0000              
+   15 0000 7453                 mov             a,#01010011b    ;Carrega o valor 01010011 binário para o acc
+   16 0002 75F029               mov             b,#00101001b    ;Carrega o valor 00101001 binário para o b
+   17 0005              
+   18 0005 55F0                 anl             a,b             ; acc = acc AND b = 0000 0001
+   19 0007 F4                   cpl             a               ; acc = not(acc)  = 1111 1110
+   20 0008              
+   21 0008 45F0                 orl             a,b,            ; acc = acc OR b  = 1111 1111
+   22 000A              
+   23 000A 65F0                 xrl             a,b             ; acc = acc XOR b = 1101 0110
+   24 000C              
+   25 000C 03                   rr              a               ; acc = 0110 1011
+   26 000D 03                   rr              a
+   27 000E 03                   rr              a
+   28 000F              
+   29 000F 23                   rl              a
+   30 0010 23                   rl              a
+   31 0011 23                   rl              a
+   32 0012              
+   33 0012 0112                 ajmp            $               ;Segura o código nesta linha
+   34 0014              
+   35 0014                      end                             ;Final do programa
+
+Defined Symbols:
+
+Defined Labels:
+  INICIO                                    000000  0
