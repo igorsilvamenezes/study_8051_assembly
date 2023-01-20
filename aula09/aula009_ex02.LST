@@ -1,0 +1,35 @@
+8051 Assembler           Version 1.00   01/19/123 23:14:46    Page 1
+C:\IGOR\STUDIES\8051_assembly\aulas_2023\aula09\aula009_ex02.a51
+
+
+
+    1 0000              ;
+    2 0000              ; Aula 009 exemplo 02
+    3 0000              ;
+    4 0000              
+    5 0000                      org             0000h
+    6 0000 E4                   clr             a
+    7 0001              
+    8 0001              aux1:
+    9 0001 7580BB               mov             p0,#0bbh        ;move o valor bbh para p0
+   10 0004              
+   11 0004              inicio:
+   12 0004              
+   13 0004 6003                 jz              aux2            ;acc == 0? se sim, desvia para a label aux2
+   14 0006 70F9                 jnz             aux1            ;acc != 0? se sim, desvia para a label aux1
+   15 0008 00                   nop                             ; se, operação
+   16 0009              
+   17 0009              aux2:
+   18 0009              
+   19 0009 7580AA               mov             p0,#0aah        ;move o valor aah para o p0
+   20 000C E580                 mov             a,p0            ;carrega o valor de p0 para acc
+   21 000E 020004               jmp             inicio          ;desvia para label inicio
+   22 0011              
+   23 0011                      end                             ;final do programa
+
+Defined Symbols:
+
+Defined Labels:
+  AUX1                                      000001  1
+  AUX2                                      000009  9
+  INICIO                                    000004  4
